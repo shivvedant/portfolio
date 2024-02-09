@@ -1,0 +1,316 @@
+/*
+
+imported poppins
+imported a cursive font to make a logo
+added some basic styling
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*
+
+styling the navbar and the link items.
+added a hover effect to the links.
+styled the navbar to leave some space between two containers.
+
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
+  margin: 0px 40px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 0px 15px;
+  transition: 0.3s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.navbar li a:hover {
+  border-bottom: 1px solid black;
+  color: black;
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  font-family: "Cedarville Cursive", cursive;
+}
+
+/*
+
+added display flex to the hero section to make it look better, because i had an image to put.
+i also added a box shadow to the image to make it look better.
+also added two aesthetically inclined buttons to the home page.
+added a hover effect to the buttons.
+adjusted by adding some margins.
+added an animation to the center image (i have seen this type of idea somewhere)
+
+*/
+
+.hero {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  margin-top: 90px;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  transform: translateY(70px);
+  opacity: 0;
+  transition: 1s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero-texts {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  /* background-color: green; */
+  height: 350px;
+  /* justify-content: space-between; */
+}
+
+.hero-img-lg img {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  box-shadow: 2px 8px 8px 8px rgba(0, 0, 0, 0.1);
+  animation: levitate 1s infinite ease-in-out alternate;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translate();
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-xl {
+  margin-bottom: 22px;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.hero-sm {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons {
+}
+
+.hero-buttons button {
+  padding: 10px 25px;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  transition: 0.4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.project-btn {
+  background: none;
+  margin-left: 10px;
+}
+
+.contact:hover {
+  background: none;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.project-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+/*
+
+downloaded some icons from font-awesome
+added a fixed margin to the svgs.
+gave a margin auto and aligned them to the center
+
+*/
+
+.hero-icons-xl {
+  margin-top: 86px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 26px;
+  /* background-color: red; */
+}
+
+.hero-icons-xl svg {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+/*
+
+styling the works section.
+added some margin.
+coded the iframe.
+styled the container to wrap when 'flex wraps'
+
+*/
+
+.my-works {
+  /* background-color: red; */
+  margin-top: 245px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  transform: translateY(-75px);
+  opacity: 0;
+  transition: 3s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.youtube {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px 40px;
+}
+
+.section-heading {
+  width: fit-content;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+/*
+
+Improved the line height.
+added some margin.
+added a fixed width.
+created a class '.spe-link' for a special link
+
+*/
+
+.contact-me {
+  margin-top: 245px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transform: translateY(-75px);
+  opacity: 0;
+  transition: 3s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.contact-me p {
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+.spe-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.spe-link:hover {
+  background-color: black;
+  color: white;
+}
+
+/* 
+
+designed a simple footer
+porfolio is not supposed to have a complicated footer to be honest.
+
+*/
+
+.footer {
+  padding: 20px;
+  margin-top: 245px;
+  background-color: rgb(244, 242, 242);
+  text-align: center;
+}
+
+.footer-handles {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-handles svg {
+  cursor: pointer;
+}
+
+.footer-text {
+  font-size: 1.1rem;
+}
+
+/* 
+
+styling the about me section.
+added some margins, line height to the <p></p> tag
+adjusted the font size.
+added a transition, cubic bezier 😏
+
+*/
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 245px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-115px);
+  opacity: 0;
+  transition: 3s all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.about-me p {
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
